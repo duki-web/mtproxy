@@ -79,6 +79,7 @@ docker run -d \
 -e domain="cloudflare.com" \
 -e secret="548593a9c0688f4f7d9d57377897d964" \
 -e ip_white_list="OFF" \
+-e provider=2 \
 -p 8080:80 \
 -p 8443:443 \
 ellermister/mtproxy
@@ -89,7 +90,7 @@ ellermister/mtproxy
 - **OFF** 关闭白名单
 - **IP** 开启 IP 白名单
 - **IPSEG** 开启 IP 段白名单
-- **sysctl** 添加--sysctl参数禁用IPv6（默认启用ipv6，可修复双栈IP的iOS客户端不能连接的bug）
+- **sysctl** 添加--sysctl参数禁用IPv6（默认启用ipv6，可修复双栈IP导致的iOS客户端不能连接的bug）
   
 - **provider** 代理提供者
 
