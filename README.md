@@ -74,6 +74,8 @@ ellermister/mtproxy
 docker run -d \
 --name mtproxy \
 --restart=always \
+--sysctl net.ipv6.conf.all.disable_ipv6=1 \
+--sysctl net.ipv6.conf.default.disable_ipv6=1 \
 -e domain="cloudflare.com" \
 -e secret="548593a9c0688f4f7d9d57377897d964" \
 -e ip_white_list="OFF" \
@@ -87,6 +89,11 @@ ellermister/mtproxy
 - **OFF** 关闭白名单
 - **IP** 开启 IP 白名单
 - **IPSEG** 开启 IP 段白名单
+- **sysctl** 添加--sysctl参数禁用IPv6（默认启用ipv6，可修复双栈IP的iOS客户端不能连接的bug）
+- **provider** 代理提供者
+1 telegram 官方代理程序 (只支持 x86_64)
+2 mtg go 版本程序
+3 mtprotoproxy python 版本程序
 
 `secret`指定密钥：如果你想创建已知的密钥，格式为：32位十六进制字符。
 
