@@ -90,7 +90,9 @@ ellermister/mtproxy
 - **IP** 开启 IP 白名单
 - **IPSEG** 开启 IP 段白名单
 - **sysctl** 添加--sysctl参数禁用IPv6（默认启用ipv6，可修复双栈IP的iOS客户端不能连接的bug）
+  
 - **provider** 代理提供者
+
 1 telegram 官方代理程序 (只支持 x86_64)
 2 mtg go 版本程序
 3 mtprotoproxy python 版本程序
