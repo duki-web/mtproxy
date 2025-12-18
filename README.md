@@ -94,8 +94,11 @@ ellermister/mtproxy
 - **provider** 代理提供者
 
 1 telegram 官方代理程序 (只支持 x86_64)
+
 2 mtg go 版本程序
+
 3 mtprotoproxy python 版本程序
+
 
 `secret`指定密钥：如果你想创建已知的密钥，格式为：32位十六进制字符。
 
